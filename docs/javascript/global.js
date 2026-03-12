@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const siteLoader = document.getElementById("siteLoader");
+
+  if (siteLoader) {
+    const hideLoader = () => {
+      siteLoader.classList.add("is-hidden");
+      document.body.classList.remove("is-loading");
+
+      window.setTimeout(() => {
+        siteLoader.remove();
+      }, 460);
+    };
+
+    if (document.readyState === "complete") {
+      window.setTimeout(hideLoader, 180);
+    } else {
+      window.addEventListener("load", () => {
+        window.setTimeout(hideLoader, 180);
+      }, { once: true });
+
+      // Fallback in case a third-party asset delays the load event too long.
+      window.setTimeout(hideLoader, 2200);
+    }
+  }
+
   if (window.Lenis) {
     new Lenis({
       autoRaf: true,

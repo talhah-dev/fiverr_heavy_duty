@@ -40,7 +40,19 @@
 </head>
 
 <body data-page="heavy-duty-towing"
-    class="bg-slate-950 text-white selection:bg-[#E6C17A] selection:text-slate-950">
+    class="is-loading bg-slate-950 text-white selection:bg-[#E6C17A] selection:text-slate-950">
+    <div id="siteLoader" class="site-loader" aria-hidden="true">
+        <div class="site-loader__panel">
+            <span class="site-loader__mark">
+                <span class="site-loader__ring"></span>
+                <i class="fa-solid fa-truck-front"></i>
+            </span>
+            <p class="site-loader__eyebrow">Dispatch Loading</p>
+            <p class="site-loader__title">Heavy Duty Towing Near Me</p>
+            <p class="site-loader__text">Getting everything ready for your visit.</p>
+        </div>
+    </div>
+
     <button id="toTopBtn" type="button" aria-label="Back to top"
         class="fixed bottom-5 right-5 z-50 flex h-12 w-12 translate-y-4 items-center justify-center rounded-full border border-white/15 bg-[#154360] text-white opacity-0 shadow-[0_18px_40px_rgba(7,18,31,0.35)] transition duration-300 pointer-events-none hover:bg-[#0f334c]">
         <i class="fa-solid fa-arrow-up"></i>
